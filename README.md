@@ -1,4 +1,3 @@
----
 # BikeShare Riders Prediction
 
 ![](images/markus-winkler-unsplash-bikes.jpg)
@@ -18,6 +17,7 @@
 - [Author Info](#author-info)
 
 
+---
 ## Introduction
 Imagine a bike sharing company called BikeShare that rents bikes to riders. Company's revenue/profit is directly related with how many bikes it rents out on a given day. A major dilemma that company faces is to forecast how many bikes it needs to make available in the shop on a given day. BikeShare will loose potential business and revenue if there are too many riders asking for bikes but there aren't enough bikes available for rent. On the other hand if riders are too few then extra bikes will be just sitting in the shop without being used and loosing money. If BikeShare somehow, looking at the historical rental data, could forecast the number of riders it can expect looking to rent the bike on a given day then it can use this prediction to efficiently plan and manage the number of bikes it stocks on any given day which in turn would maximize its profits.
 
