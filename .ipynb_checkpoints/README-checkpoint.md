@@ -1,3 +1,4 @@
+---
 # BikeShare Riders Prediction
 
 ![](images/markus-winkler-unsplash-bikes.jpg)
@@ -16,7 +17,6 @@
 - [License](#license)
 - [Author Info](#author-info)
 
----
 
 ## Introduction
 Imagine a bike sharing company called BikeShare that rents bikes to riders. Company's revenue/profit is directly related with how many bikes it rents out on a given day. A major dilemma that company faces is to forecast how many bikes it needs to make available in the shop on a given day. BikeShare will loose potential business and revenue if there are too many riders asking for bikes but there aren't enough bikes available for rent. On the other hand if riders are too few then extra bikes will be just sitting in the shop without being used and loosing money. If BikeShare somehow, looking at the historical rental data, could forecast the number of riders it can expect looking to rent the bike on a given day then it can use this prediction to efficiently plan and manage the number of bikes it stocks on any given day which in turn would maximize its profits.
@@ -69,92 +69,15 @@ publicly available in http://capitalbikeshare.com/system-data. We aggregated the
 - The Network trains using Stochastic Gradient Descend (SGD) method where a random batch of data-points are pushed through the netowrk and `network-weights` are updated once for this batch then next random batch is processed. This continues for a given number of epochs (iterations), once done we have a network with updated weights i.e. a trained network that can be used by BikeShare for making prediction. 
 
 ### Loss function and Gradient Descend 
-For each data-point the output of a layer is computed as...
+![](images/pic1.png)
 
-$$ \Large{\hat y = \sum_{j}^{m}{w_j \cdot x}}\tag{1}$$
-
-where...<br> $\hat y$ is the `predicted-output`, $m$ is the `number of nodes` in the layer, $j$ is the `node index`and $x$ is the `input data-point`
-
-Note that, in practice the above computation is implemented as the `dot product` or `matrix-multiplication` of input ($X$) and weight ($W$) matrices <br>
-
-We are using `MSE` (Mean Squared Error) as the loss function. Once `network-error` (E) is calculated its propagated back through the network by using `gradient-descend`
-
-$$\Large{E = \frac{1}{2}(y - \hat y)^2}\tag{2}$$
-
-where...<br> $m$ is the `number of nodes`, $j$ is the `node index`and $y$ is actual target
-
-Now in order to propagate the MSE error (E) back and update the network weights we need to know the incremental-quantity (delta-weight) by which network-weights to be updated. This quantity is nothing but a fraction of `negative of the gradient` of the error function (MSE in this case). In practice, the delta weight is calculated for each of the network-weights by taking the `partial-derivative` of the error-function (E above) with respect to the respective weight, scaled by the `learning-rate` hyperparameter. Its then used to update the network-weight.
-
-$$\Large{\Delta w = - \eta \cdot \frac{\partial E}{\partial w}}\tag{3}$$
-
-The partial derivative of error-function E w.r.t weights would result in below equation...
-
-$$\Large{\Delta w = - (y - \hat y) \cdot f^\prime(h) \cdot x}\tag{4}$$
-
-where...<br>$\Delta w$ is the `delta weight`,  $w$ is `a network weight` and $x$ is the input. $f^\prime$ is the derivative of $f$ which is the activation function used in the layer and $h$ is linear output ($w \cdot x $) of the layer.
-
-For implementation convenience we compute an `error-term` $\delta$ as... 
-$$\Large{\delta = (y - \hat y) \cdot f^\prime(h)}\tag{5}$$
-
-With this, our equation (4) above can be re-written as...
-$$\Large{\Delta w = - \delta \cdot x}\tag{6}$$
-
-<br>Finally the network weight will be updated as...
-
-$$\Large{w = w + } \eta \cdot \large{\Delta}\Large{w}\tag{7}$$
-
-where...
-$\eta$ is the `learning-rate`
+![](images/pic2.png)
 
 ### Implementation details
 
-> NeuralNetwork class implements `train` method, where...
->    - It gets a batch of data-points (sample/record). It then pushes each data-point forward using `forward_pass_train` method and computes the final output for this data point. 
->    - It then computes the `delta-weight` (a small change in network weights) for each data-point using `backpropagation` method. SGD algorithm is used to compute delta-weight.
->    - forward-pass and backward-pass is performed repeatedly for each data-point in the given batch until all data-points are processed.
->    - In the end we'll have cumulative `delta-weights` for the whole batch 
->    - Then `update_weights` method is invoked once per batch. It first computes the average delta-weights for the batch from cumulative delta-weights, it then updates `network-weights` by delta-weights scaled by the `learning-rate` hyperparameter  
-> NeuralNetwork class implements `forward_pass_train` method, where...
->    - It produces the final output $\hat y$ for each data-point as per equation (1)
+![](images/pic3.png)
 
-> NeuralNetwork class implements `backpropagation` method, where...
->    - It Computes the `final output error` as shown below 
-> $$ \Large{output\_error = y - \hat y}$$
-> <br><br> It then computes the output `error-term` as per equation (5)...
-> $$\Large{\delta_o = output\_error \cdot f^\prime(o) = output\_error \cdot 1}$$
-> <br>Note that $f(o)$ is the output of final layer, since there is no activation function in output layer (i.e. its just a linear function) its derivative $f^\prime(o)$ is 1
-> It then computes and accumulates (for each data-point processed) the delta-weight between `hidden` (h) and `output` (o) layer as per equation (6)...
->
-> $$\Large{\Delta w_{h\_o} = \Delta w_{h\_o} + \delta_o \cdot f(h)}$$
-> where...
-> $f(h)$ is the output of hidden layer
->
-> It then computes the `hidden-error` (error contribution of hidden layer) as a fraction of of output-error-term proportional to weights between hidden and output layer
->
-> $$\Large{hidden\_error = \delta_o \cdot w_{h\_o}}$$
-> where...
-> $w_{h\_o}$ is the weight between hidden and output layer
->
-> `hidden-error-term` is computed as per equation (5)...
->
-> $$\Large{\delta_h = hidden\_error \cdot f^\prime(h) = output\_error \cdot f(h) \cdot (1 - f(h))}$$
-> <br>Note that $f(h)$ is the output of final layer, since `sigmoid` activation function is used in hidden layer its derivative $f^\prime(h)$ is $f(h) \cdot (1 - f(h))$
->
-> It then computes and accumulates (for each data-point processed) the delta-weight between `input` (x) and `hidden` (h) layer as per equation (6)...
->
-> $$\Large{\Delta w_{x\_h} = \Delta w_{x\_h} + \delta_h \cdot x}$$
-
-> NeuralNetwork class implements `update_weights` method, where...
->    - It first calculates the average delta-weights (note that in above calculation the delta-weights is calculated a cumulative sum across all data point) 
->    - Finally it updates the network-weights as per equation (7)...
->
->$$\Large{w_{h\_o} = w_{h\_o} + \eta \cdot \Delta w_{h\_o}}$$
->
->$$\Large{w_{x\_h} = w_{x\_h} + \eta \cdot \Delta w_{x\_h}}$$
-
-> NeuralNetwork class implements `run` method, where...
->    - It gets a batch of data-points. It then pushes the data batch forward and returns prediction (number of expected riders) for each data-point in the batch. 
->    - Run method can be used for final prediction using the trained model
+![](images/pic4.png)
 
 ---
 
