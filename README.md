@@ -10,7 +10,6 @@ In this project we tackle a Regression problem. We will build a simple multi-lay
 ⚡Gradient Descent From Scratch <br>
 ⚡NumPy
 
-
 ## Table of Contents
 
 - [Introduction](#introduction) 
@@ -24,14 +23,17 @@ In this project we tackle a Regression problem. We will build a simple multi-lay
 
 
 ---
+
 ## Introduction
 Imagine a bike-sharing company called BikeShare that rents bikes to riders. The company's revenue/profit is directly related to how many cycles it rents out on a given day. The company's significant dilemma is to forecast how many bikes it needs to make available in the shop on a given day. BikeShare will lose potential business and revenue if too many riders ask for bikes, but there aren't enough bikes available for rent. On the other hand, if riders are too few, the surplus bikes will be just sitting in the shop without being used and losing money. Based on the historical rental data, If BikeShare can forecast the number of potential riders looking to rent the bike on a given day, it can maximize its profits by efficiently managing the number of cycles it stocks daily.
 
 ---
+
 ## Objective
 This project will build a simple multi-layer-perceptron (MLP) or a Neural Network (NN) model to predict the number of riders BikeShare would get on a given day. MLP/NN will be built from scratch using `NumPy.` We will not use sophisticated deep-learning frameworks such as PyTorch or Tensorflow to develop and train the network. The main aim here is to build the network from the ground up to get a deeper understanding of the inner workings of a typical neural network.
 
 ---
+
 ## Dataset
 - Dataset used in this project is sourced from UCI Machine Learning Repository. Data is available daily (daily.csv) and hourly (hour.csv). 
 For this project, we'll just make use of hourly data that is more granular than daily data. Dataset provides 2 years worth of data and its relatively small in size, a copy of `hour.csv` is available in the `data` folder in this repo. The complete dataset can be accessed from [here](https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset)
@@ -81,6 +83,7 @@ publicly available in http://capitalbikeshare.com/system-data. We aggregated the
 * Our goal is to obtain the lowest possible MSE for predictions made using the separately kept `test` dataset
 
 ---
+
 ## How To Use
 1. Ensure the below-listed packages are installed
     - `NumPy`
@@ -95,12 +98,10 @@ publicly available in http://capitalbikeshare.com/system-data. We aggregated the
     ```
 ---
 
-
 ## License
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-Copyright (c) [2021] [Sunil S. Singh]
 ---
 
 ## Author Info
@@ -110,12 +111,11 @@ Copyright (c) [2021] [Sunil S. Singh]
 - Email: mailto:sunil.singh@datamatrix-ml.com
 - Website: https://datamatrix-ml.com 
 
-[Back To The Top](#BikeShare-Riders-Prediction)
-
 ---
 
 ## Credits
 - Title photo by <a href="https://unsplash.com/@markuswinkler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Winkler</a> on <a href="https://unsplash.com/s/photos/bike-rental?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
 ---
 
 ## Appendix
@@ -130,4 +130,6 @@ Copyright (c) [2021] [Sunil S. Singh]
 ![](images/pic3.png)
 
 ![](images/pic4.png)
+
+[Back To The Top](#BikeShare-Riders-Prediction)
 
