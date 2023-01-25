@@ -20,7 +20,8 @@ In this project we tackle a Regression problem. We will build a simple multi-lay
 - [How To Use](#how-to-use)
 - [License](#license)
 - [Author Info](#author-info)
-
+- [Credits](#credits)
+- [Appendix](#appendix)
 
 ---
 
