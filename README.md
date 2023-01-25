@@ -5,9 +5,9 @@ In this project we tackle a Regression problem. We will build a simple multi-lay
 ![](images/markus-winkler-unsplash-bikes.jpg)
 
 ## Features
-⚡Regression
-⚡NN Implementation From Scratch
-⚡Gradient Descent From Scratch
+⚡Regression <br>
+⚡NN Implementation From Scratch <br>
+⚡Gradient Descent From Scratch <br>
 ⚡NumPy
 
 
@@ -95,23 +95,6 @@ publicly available in http://capitalbikeshare.com/system-data. We aggregated the
     ```
 ---
 
-## Appendix
-
-### Loss function and Gradient Descend 
-![](images/pic1.png)
-
-![](images/pic2.png)
-
-### Implementation details
-
-![](images/pic3.png)
-
-![](images/pic4.png)
-
-
-## Credits
-- Title photo by <a href="https://unsplash.com/@markuswinkler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Winkler</a> on <a href="https://unsplash.com/s/photos/bike-rental?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
----
 
 ## License
 
@@ -147,3 +130,21 @@ SOFTWARE.
 [Back To The Top](#BikeShare-Riders-Prediction)
 
 ---
+
+## Credits
+- Title photo by <a href="https://unsplash.com/@markuswinkler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Winkler</a> on <a href="https://unsplash.com/s/photos/bike-rental?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+---
+
+## Appendix
+
+### Loss function and Gradient Descend 
+![](images/pic1.png)
+
+![](images/pic2.png)
+
+### Implementation details
+
+![](images/pic3.png)
+
+![](images/pic4.png)
+
