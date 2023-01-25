@@ -10,6 +10,8 @@ In this project we tackle a Regression problem. We will build a simple multi-lay
 ⚡Gradient Descent From Scratch <br>
 ⚡NumPy
 
+---
+
 ## Table of Contents
 
 - [Introduction](#introduction) 
@@ -23,7 +25,6 @@ In this project we tackle a Regression problem. We will build a simple multi-lay
 - [Credits](#credits)
 - [Appendix](#appendix)
 
----
 
 ## Introduction
 Imagine a bike-sharing company called BikeShare that rents bikes to riders. The company's revenue/profit is directly related to how many cycles it rents out on a given day. The company's significant dilemma is to forecast how many bikes it needs to make available in the shop on a given day. BikeShare will lose potential business and revenue if too many riders ask for bikes, but there aren't enough bikes available for rent. On the other hand, if riders are too few, the surplus bikes will be just sitting in the shop without being used and losing money. Based on the historical rental data, If BikeShare can forecast the number of potential riders looking to rent the bike on a given day, it can maximize its profits by efficiently managing the number of cycles it stocks daily.
