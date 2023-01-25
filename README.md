@@ -8,6 +8,7 @@ In this project we tackle a Regression problem. We will build a simple multi-lay
 ⚡Regression <br>
 ⚡NN Implementation From Scratch <br>
 ⚡Gradient Descent From Scratch <br>
+⚡Python <br>
 ⚡NumPy
 
 ## Table of Contents
