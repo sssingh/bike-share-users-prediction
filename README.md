@@ -1,8 +1,14 @@
 # BikeShare Riders Prediction
 
+In this project we tackle a Regression problem. We will build a simple multi-layer-perceptron (MLP) or a Deep Neural Network (DNN) from scratch using the NumPy package to predict the number of riders BikeShare would get on a given day.
+
 ![](images/markus-winkler-unsplash-bikes.jpg)
 
-### Predict Number of BikeShare riders on a given day
+## Features
+⚡Regression
+⚡NN Implementation From Scratch
+⚡Gradient Descent From Scratch
+⚡NumPy
 
 
 ## Table of Contents
@@ -68,17 +74,6 @@ publicly available in http://capitalbikeshare.com/system-data. We aggregated the
 - The Network is built as a python class `NeuralNetwork` with just one input, one hidden, and one output layer where the hidden layer uses a `sigmoid` activation
 - The Network trains using the Stochastic Gradient Descend (SGD) method where a random batch of data points are pushed through the network and `network-weights` are updated once for this batch, then the next random batch is processed. The process is continued for a given number of epochs (iterations). Once done, we have a network with updated weights, i.e., a trained network that can be used by BikeShare for making the prediction. 
 
-### Loss function and Gradient Descend 
-![](images/pic1.png)
-
-![](images/pic2.png)
-
-### Implementation details
-
-![](images/pic3.png)
-
-![](images/pic4.png)
-
 ---
 
 ## Evaluation Criteria
@@ -100,13 +95,27 @@ publicly available in http://capitalbikeshare.com/system-data. We aggregated the
     ```
 ---
 
+## Appendix
+
+### Loss function and Gradient Descend 
+![](images/pic1.png)
+
+![](images/pic2.png)
+
+### Implementation details
+
+![](images/pic3.png)
+
+![](images/pic4.png)
+
+
 ## Credits
 - Title photo by <a href="https://unsplash.com/@markuswinkler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Winkler</a> on <a href="https://unsplash.com/s/photos/bike-rental?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 ---
 
 ## License
 
-MIT License
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 Copyright (c) [2021] [Sunil S. Singh]
 
