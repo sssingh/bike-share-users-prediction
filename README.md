@@ -10,8 +10,6 @@ In this project we tackle a Regression problem. We will build a simple multi-lay
 ⚡Gradient Descent From Scratch <br>
 ⚡NumPy
 
----
-
 ## Table of Contents
 
 - [Introduction](#introduction) 
@@ -29,12 +27,8 @@ In this project we tackle a Regression problem. We will build a simple multi-lay
 ## Introduction
 Imagine a bike-sharing company called BikeShare that rents bikes to riders. The company's revenue/profit is directly related to how many cycles it rents out on a given day. The company's significant dilemma is to forecast how many bikes it needs to make available in the shop on a given day. BikeShare will lose potential business and revenue if too many riders ask for bikes, but there aren't enough bikes available for rent. On the other hand, if riders are too few, the surplus bikes will be just sitting in the shop without being used and losing money. Based on the historical rental data, If BikeShare can forecast the number of potential riders looking to rent the bike on a given day, it can maximize its profits by efficiently managing the number of cycles it stocks daily.
 
----
-
 ## Objective
 This project will build a simple multi-layer-perceptron (MLP) or a Neural Network (NN) model to predict the number of riders BikeShare would get on a given day. MLP/NN will be built from scratch using `NumPy.` We will not use sophisticated deep-learning frameworks such as PyTorch or Tensorflow to develop and train the network. The main aim here is to build the network from the ground up to get a deeper understanding of the inner workings of a typical neural network.
-
----
 
 ## Dataset
 - Dataset used in this project is sourced from UCI Machine Learning Repository. Data is available daily (daily.csv) and hourly (hour.csv). 
@@ -66,8 +60,6 @@ Quote from the dataset readme.txt...
 > <cite> Bike-sharing rental process is highly correlated to the environmental and seasonal settings. For instance, weather conditions, precipitation, day of the week, season, the hour of the day, etc., can affect the rental behaviors. The core data set is related to the two-year historical log corresponding to 2011 and 2012 from the Capital Bikeshare system, Washington D.C., the USA, which is 
 publicly available in http://capitalbikeshare.com/system-data. We aggregated the data on two hourly and daily basis and then extracted and added the corresponding weather and seasonal information. Weather information is extracted from http://www.freemeteo.com. </cite>
 
----
-
 ## Solution Approach
 - We start with Loading and then exploring the data by looking at available features and any apparent pattern/relationship between the features and target variable (`cnt`)
 - One hot encoding is then applied to `categorical` features
@@ -78,13 +70,9 @@ publicly available in http://capitalbikeshare.com/system-data. We aggregated the
 - The Network is built as a python class `NeuralNetwork` with just one input, one hidden, and one output layer where the hidden layer uses a `sigmoid` activation
 - The Network trains using the Stochastic Gradient Descend (SGD) method where a random batch of data points are pushed through the network and `network-weights` are updated once for this batch, then the next random batch is processed. The process is continued for a given number of epochs (iterations). Once done, we have a network with updated weights, i.e., a trained network that can be used by BikeShare for making the prediction. 
 
----
-
 ## Evaluation Criteria
 * `MSE` is used as the primary metric for loss calculation and model evaluation, formula shown in equation (2) above
 * Our goal is to obtain the lowest possible MSE for predictions made using the separately kept `test` dataset
-
----
 
 ## How To Use
 1. Ensure the below-listed packages are installed
@@ -98,13 +86,10 @@ publicly available in http://capitalbikeshare.com/system-data. We aggregated the
     ```python
     preds = network.run(data_points)
     ```
----
 
 ## License
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-
----
 
 ## Author Info
 
@@ -113,12 +98,8 @@ publicly available in http://capitalbikeshare.com/system-data. We aggregated the
 - Email: mailto:sunil.singh@datamatrix-ml.com
 - Website: https://datamatrix-ml.com 
 
----
-
 ## Credits
 - Title photo by <a href="https://unsplash.com/@markuswinkler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Winkler</a> on <a href="https://unsplash.com/s/photos/bike-rental?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
----
 
 ## Appendix
 
