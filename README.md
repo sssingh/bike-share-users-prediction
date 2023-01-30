@@ -1,5 +1,4 @@
 # BikeShare Riders Prediction
-
 In this project we tackle a Regression problem. We will build a simple multi-layer-perceptron (MLP) or a Deep Neural Network (DNN) from scratch using the NumPy package to predict the number of riders BikeShare would get on a given day.
 
 <img src="images/markus-winkler-unsplash-bikes.jpg" width="800" height="300" />
@@ -12,12 +11,11 @@ In this project we tackle a Regression problem. We will build a simple multi-lay
 ⚡NumPy
 
 ## Table of Contents
-
 - [Introduction](#introduction) 
 - [Objective](#objective)
 - [Dataset](#dataset)
-- [Solution Approach](#solution-approach)
 - [Evaluation Criteria](#evaluation-criteria)
+- [Solution Approach](#solution-approach)
 - [How To Use](#how-to-use)
 - [License](#license)
 - [Get in touch](#get-in-touch)
@@ -61,6 +59,10 @@ Quote from the dataset readme.txt...
 > <cite> Bike-sharing rental process is highly correlated to the environmental and seasonal settings. For instance, weather conditions, precipitation, day of the week, season, the hour of the day, etc., can affect the rental behaviors. The core data set is related to the two-year historical log corresponding to 2011 and 2012 from the Capital Bikeshare system, Washington D.C., the USA, which is 
 publicly available in http://capitalbikeshare.com/system-data. We aggregated the data on two hourly and daily basis and then extracted and added the corresponding weather and seasonal information. Weather information is extracted from http://www.freemeteo.com. </cite>
 
+## Evaluation Criteria
+* `MSE` is used as the primary metric for loss calculation and model evaluation, formula shown in equation (2) above
+* Our goal is to obtain the lowest possible MSE for predictions made using the separately kept `test` dataset
+
 ## Solution Approach
 - We start with Loading and then exploring the data by looking at available features and any apparent pattern/relationship between the features and target variable (`cnt`)
 - One hot encoding is then applied to `categorical` features
@@ -70,10 +72,6 @@ publicly available in http://capitalbikeshare.com/system-data. We aggregated the
 - The dataset is then split into training and validation sets (60 days worth of data)
 - The Network is built as a python class `NeuralNetwork` with just one input, one hidden, and one output layer where the hidden layer uses a `sigmoid` activation
 - The Network trains using the Stochastic Gradient Descend (SGD) method where a random batch of data points are pushed through the network and `network-weights` are updated once for this batch, then the next random batch is processed. The process is continued for a given number of epochs (iterations). Once done, we have a network with updated weights, i.e., a trained network that can be used by BikeShare for making the prediction. 
-
-## Evaluation Criteria
-* `MSE` is used as the primary metric for loss calculation and model evaluation, formula shown in equation (2) above
-* Our goal is to obtain the lowest possible MSE for predictions made using the separately kept `test` dataset
 
 ## How To Use
 1. Ensure the below-listed packages are installed
@@ -89,11 +87,9 @@ publicly available in http://capitalbikeshare.com/system-data. We aggregated the
     ```
 
 ## License
-
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 ## Get in touch
-
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/sssingh)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/_sssingh)
 [![website](https://img.shields.io/badge/website-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://datamatrix-ml.com/)
