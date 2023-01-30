@@ -2,7 +2,7 @@
 
 In this project we tackle a Regression problem. We will build a simple multi-layer-perceptron (MLP) or a Deep Neural Network (DNN) from scratch using the NumPy package to predict the number of riders BikeShare would get on a given day.
 
-<img src="images/markus-winkler-unsplash-bikes.jpg" width="600" height="300" />
+<img src="images/markus-winkler-unsplash-bikes.jpg" width="800" height="300" />
 
 ## Features
 ⚡Regression <br>
