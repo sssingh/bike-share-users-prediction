@@ -2,7 +2,7 @@
 
 In this project we tackle a Regression problem. We will build a simple multi-layer-perceptron (MLP) or a Deep Neural Network (DNN) from scratch using the NumPy package to predict the number of riders BikeShare would get on a given day.
 
-![](images/markus-winkler-unsplash-bikes.jpg)
+<img src="images/markus-winkler-unsplash-bikes.jpg" width="600" height="300" />
 
 ## Features
 ⚡Regression <br>
@@ -20,7 +20,7 @@ In this project we tackle a Regression problem. We will build a simple multi-lay
 - [Evaluation Criteria](#evaluation-criteria)
 - [How To Use](#how-to-use)
 - [License](#license)
-- [Author Info](#author-info)
+- [Get in touch](#get-in-touch)
 - [Credits](#credits)
 - [Appendix](#appendix)
 
@@ -92,12 +92,12 @@ publicly available in http://capitalbikeshare.com/system-data. We aggregated the
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-## Author Info
+## Get in touch
 
-- Twitter: [@_sssingh](https://twitter.com/_sssingh)
-- Linkedin: [Sunil S. Singh](https://linkedin.com/in/sssingh)
-- Email: mailto:sunil.singh@datamatrix-ml.com
-- Website: https://datamatrix-ml.com 
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/sssingh)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/_sssingh)
+[![website](https://img.shields.io/badge/website-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://datamatrix-ml.com/)
+ 
 
 ## Credits
 - Title photo by <a href="https://unsplash.com/@markuswinkler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Winkler</a> on <a href="https://unsplash.com/s/photos/bike-rental?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
