@@ -101,15 +101,15 @@ publicly available in http://capitalbikeshare.com/system-data. We aggregated the
 ## Appendix
 
 ### Loss function and Gradient Descend 
-![](images/pic1.png)
+<img src="https://github.com/sssingh/bike-share-users-prediction/blob/master/images/pic1.png?raw=true">
 
-![](images/pic2.png)
+<img src="https://github.com/sssingh/bike-share-users-prediction/blob/master/images/pic2.png?raw=true">
 
 ### Implementation details
 
-![](images/pic3.png)
+<img src="https://github.com/sssingh/bike-share-users-prediction/blob/master/images/pic3.png?raw=true">
 
-![](images/pic4.png)
+<img src="https://github.com/sssingh/bike-share-users-prediction/blob/master/images/pic4.png?raw=true">
 
 [Back To The Top](#BikeShare-Riders-Prediction)
 
